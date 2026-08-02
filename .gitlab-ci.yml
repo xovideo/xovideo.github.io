@@ -1,0 +1,21 @@
+# Konfigurasi GitLab CI/CD untuk Deployment ke GitLab Pages
+image: node:20
+
+# Cache node_modules agar build lebih cepat di kemudian hari
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  stage: deploy
+  script:
+    - npm install
+    - npm run build
+    - rm -rf public
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+    - master

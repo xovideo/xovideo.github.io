@@ -1,0 +1,8 @@
+{
+  "name": "Viral Video Player ID",
+  "description": "Pemutar video viral Indonesia dengan integrasi iklan berkonversi tinggi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
